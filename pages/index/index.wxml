@@ -1,0 +1,13 @@
+
+
+
+<view class="container">
+    <block wx:for="{{objectArray}}"> 
+      <view class="">
+            <image src="{{ item.imgUrl }}" bindload="imageLoad" data-index="{{ index }}" 
+      style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;"></image>
+      </view>
+
+
+    </block>
+</view>
