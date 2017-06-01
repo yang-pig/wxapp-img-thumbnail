@@ -1,0 +1,249 @@
+
+<view class="detail">
+
+<view class="header">
+    <view class="left">
+      <view class="left-img">
+      <image src="../../images/header02.png"></image>
+
+      </view>
+      <view class="left-text">
+      今天答错了 <text style="color:red;font-weight:bold;font-size:16px;"> 4 </text>道
+      </view>
+    </view>
+    <view class="right">
+      <view class="right-img">
+      <image src="../../images/header01.png"></image>
+
+      </view>
+      <view class="right-text">
+        等级评为：<text style="color:red;font-weight:bold;font-size:16px;">B</text>
+      </view>
+    </view>
+</view>
+
+
+<block wx:for="{{objectArray}}">
+    <view class="number">
+      <view class="number-text">{{item.tltle}}</view>
+    </view>
+
+<!--{{ images[index].width }}
+
+    {{ images[index].height }}-->
+
+    <view class="content">
+        
+        <view class="img">
+
+
+
+        <view class="cn">
+
+
+              <image id="img" mode="" src="{{item.imgUrl}}" data-index="{{ index }}" bindload="imageLoad"  style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;"></image>
+              
+        </view>
+
+
+
+       <block wx:if="{{item.ic == 1}}">
+          <view  style="width: 80px;height: 40px;text-align:center;line-height:40px;position: absolute;border:1px solid red;top:{{ images[index].width * 0.5}}rpx;left:{{ images[index].height*0.2}}rpx;" class="bg1">全对</view>
+       </block>
+
+      
+
+
+      <block wx:if="{{item.ic == 1}}">
+          <view style="width:0;height:0;border-width:6px 6px 6px 0;border-style:solid;border-color:transparent #5acecd transparent transparent;position:absolute;top:{{ images[index].width * 0.2}}rpx;left:{{ images[index].height*0.5}}rpx;">
+              <view class="" style="width:35px;height:12px;background:#5acecd;position:absolute;top:-6px;left:6px;font-size:10px;color:#eee;line-height:12px;text-align:center;">正确</view>
+          </view>
+       </block>
+
+
+      <block wx:if="{{item.ic == 1}}">
+          <view style="width:0;height:0;border-width:6px 6px 6px 0;border-style:solid;border-color:transparent red transparent transparent;position:absolute;top:{{ images[index].width * 0.3}}rpx;left:{{ images[index].height*0.5}}rpx;">
+              <view class="" style="width:35px;height:12px;background:red;position:absolute;top:-6px;left:6px;font-size:10px;color:#eee;line-height:12px;text-align:center;">错误</view>
+          </view>
+       </block>
+
+
+       <block wx:if="{{item.ic == 2}}">
+          <view  style="width: 80px;height: 40px;text-align:center;line-height:40px;position: absolute;border:1px solid red;top:{{ images[index].width * 0.5}}rpx;left:{{ images[index].height*0.2}}rpx;" class="bg1">全对</view>
+       </block>
+
+      
+
+
+      <block wx:if="{{item.ic == 2}}">
+          <view style="width:0;height:0;border-width:6px 6px 6px 0;border-style:solid;border-color:transparent #5acecd transparent transparent;position:absolute;top:{{ images[index].width * 0.2}}rpx;left:{{ images[index].height*0.5}}rpx;">
+              <view class="" style="width:35px;height:12px;background:#5acecd;position:absolute;top:-6px;left:6px;font-size:10px;color:#eee;line-height:12px;text-align:center;">正确</view>
+          </view>
+       </block>
+
+
+      <block wx:if="{{item.ic == 2}}">
+          <view style="width:0;height:0;border-width:6px 6px 6px 0;border-style:solid;border-color:transparent red transparent transparent;position:absolute;top:{{ images[index].width * 0.3}}rpx;left:{{ images[index].height*0.5}}rpx;">
+              <view class="" style="width:35px;height:12px;background:red;position:absolute;top:-6px;left:6px;font-size:10px;color:#eee;line-height:12px;text-align:center;">错误</view>
+          </view>
+       </block>
+
+
+          
+        </view>
+    </view>
+
+    <view class="evaluate">
+        <view class="evaluate-title">老师寄语</view>
+        <view class="evaluate-text">哈哈哈哈或或或或或或或</view>
+    </view>
+
+    </block>
+
+
+<!--<template is="msgItem" data="{{objectArray}}"/>-->
+
+<!--<view class="number">
+
+  <view class="number-text">第一题</view>
+
+</view>
+
+
+
+<view class="content">
+    
+    <view class="img">
+
+
+
+     <view class="cn">
+           <image id="img" mode="aspectFit" src="../../images/2.jpg" bindload="imageLoad">
+
+           </image>
+
+
+
+     </view>
+      
+    </view>
+</view>
+
+<view class="evaluate">
+    <view class="evaluate-title">老师寄语</view>
+    <view class="evaluate-text">哈哈哈哈或或或或或或或</view>
+</view>-->
+
+
+
+<!--<view class="number">
+
+  <view class="number-text">第二题</view>
+
+</view>
+
+<view class="content">
+    
+    <view class="img">
+      <image src="../../images/3.jpg"></image>
+    </view>
+</view>
+
+<view class="evaluate">
+    <view class="evaluate-title">老师寄语</view>
+    <view class="evaluate-text">哈哈哈哈或或或或或或或</view>
+</view>
+
+
+
+<view class="number">
+
+  <view class="number-text">第三题</view>
+
+</view>
+
+<view class="content">
+    
+    <view class="img">
+
+
+      <image src="../../images/18.jpg"></image>
+
+
+    </view>
+</view>
+
+<view class="evaluate">
+    <view class="evaluate-title">老师寄语</view>
+    <view style="margin-bottom:10rpx;" class="evaluate-text">哈哈哈哈哈哈哈哈或或或或或或或哈哈哈哈或或或或或或或或或或或或或或</view>
+</view>-->
+
+
+
+
+
+
+</view>
+
+
+
+
+
+
+
+<!--<template name="msgItem">
+
+<block wx:for="{{objectArray}}">
+    <view class="number">
+      <view class="number-text">{{item.tltle}}</view>
+    </view>
+
+
+
+    
+
+    <view class="content">
+        
+        <view class="img">
+
+
+
+        <view class="cn" style="background:blue;">
+
+
+              <image id="img" mode="aspectFit" src="{{item.imgUrl}}" data-index="{{ index }}" bindload="imageLoad"  style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;"></image>
+              
+        </view>
+
+       <block wx:if="{{item.ic == 1}}">
+          <view  style="width: 20px;height: 20px;position: absolute;background: red;top:0;left:0;" class="bg1"></view>
+       </block>
+
+
+
+        
+       <block wx:if="{{item.ic == 2}}">
+          <view class="bg2"></view>
+       </block>
+
+
+       
+
+          
+        </view>
+    </view>
+
+    <view class="evaluate">
+        <view class="evaluate-title">老师寄语</view>
+        <view class="evaluate-text">哈哈哈哈或或或或或或或</view>
+    </view>
+
+    </block>
+</template>-->
+
+
+
+<!--<block wx:for="{{objectArray}}">
+  <image src="{{item.imgUrl}}" bindload="imageTest" data-index="{{ index }}" style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;"></image>
+</block>-->
+
